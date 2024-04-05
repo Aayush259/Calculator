@@ -4,6 +4,67 @@ const InputButtons = document.querySelectorAll('.input-button, #delete-btn');
 // Getting output box.
 const OutputBox = document.querySelector('#output-box');
 
+/*
+    This function changes the theme of the app based on the type of theme passed as argument.
+*/
+const ChangeTheme = (themeType) => {
+
+    const Calculator = document.getElementById('calculator');
+
+    // For light theme.
+    if (themeType === 'light') {
+
+        document.body.style.backgroundColor = `var(--Light-gray)`;
+
+        InputButtons.forEach(button => {
+            button.style.backgroundColor = `var(--Marine-blue)`;
+            button.style.color = `var(--White)`;
+        });
+
+        Calculator.style.backgroundColor = `var(--White)`;
+
+        OutputBox.style.backgroundColor = `var(--Light-gray)`;
+
+        OutputBox.style.color = `var(--Marine-blue)`;
+
+    }
+    // For dark theme.
+    else if (themeType === 'dark') {
+
+        document.body.style.backgroundColor = `var(--Marine-blue)`;
+
+        InputButtons.forEach(button => {
+            button.style.backgroundColor = `var(--White)`;
+            button.style.color = `var(--Marine-blue)`;
+        });
+
+        Calculator.style.backgroundColor = `var(--Black)`;
+
+        OutputBox.style.backgroundColor = `var(--White)`;
+
+        OutputBox.style.color = `var(--Cool-gray)`;
+    };
+}
+
+// Getting theme button.
+const ThemeBtn = document.getElementById('theme-btn');
+
+// Adding event listener to the theme button so that when it is clicked then it changes the theme of calculator.
+ThemeBtn.addEventListener('click', () => {
+
+    // Getting image present inside the theme button.
+    let themeImage = ThemeBtn.querySelector('img');
+
+    // Changing the image src based on current theme.
+    if (themeImage.src.includes('theme2')) {
+        themeImage.src = `./images/theme1.png`;
+        ChangeTheme('light');
+    } else {
+        themeImage.src = `./images/theme2.png`;
+        ChangeTheme('dark');
+    }
+})
+
 // Setting initially expression and buttonText to NULL.
 let expression = null;
 let buttonText = null;

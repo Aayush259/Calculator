@@ -7,6 +7,8 @@
 :root {
     --Marine-blue: hsl(213, 96%, 18%);
     --White: hsl(0, 0%, 100%);
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
     --Black: #000;
 }
 
@@ -24,6 +26,24 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+}
+
+#theme-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+#theme-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+#theme-btn:active {
+    transform: scale(1);
+    opacity: 1;
 }
 
 #calculator {
