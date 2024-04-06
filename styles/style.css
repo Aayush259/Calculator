@@ -77,11 +77,11 @@ body {
 }
 
 #result-preview {
-    height: 2rem;
+    height: 2.5rem;
     width: 100%;
     background-color: var(--White);
     border-radius: 0 0 8px 8px;
-    padding: 0 10px;
+    padding: 10px 10px 10px 5px;
     text-align: right;
     color: var(--Marine-blue);
 }
@@ -121,7 +121,7 @@ button:hover {
         font-size: 1rem;
     }
 
-    .output-container > *, .input-button {
+    .output-container > *, .input-button, #result-preview {
         height: 2.5rem;
     }
 }
@@ -140,11 +140,15 @@ button:hover {
         max-width: 100px;
     }
 
+    #result-preview {
+        max-width: 128px;
+    }
+
     .input-button-container {
         grid-template-columns: repeat(4, 1.5rem);
     }
 
-    .output-container > *, .input-button {
+    .output-container > *, .input-button, #result-preview {
         font-size: 0.8rem;
         height: 1.5rem;
     }

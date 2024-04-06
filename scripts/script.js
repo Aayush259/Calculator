@@ -27,8 +27,10 @@ const ChangeTheme = (themeType) => {
         Calculator.style.backgroundColor = `var(--White)`;
 
         OutputBox.style.backgroundColor = `var(--Light-gray)`;
+        PreviewBox.style.backgroundColor = `var(--Light-gray)`;
 
         OutputBox.style.color = `var(--Marine-blue)`;
+        PreviewBox.style.color = `var(--Marine-blue)`;
 
     }
     // For dark theme.
@@ -44,8 +46,10 @@ const ChangeTheme = (themeType) => {
         Calculator.style.backgroundColor = `var(--Black)`;
 
         OutputBox.style.backgroundColor = `var(--White)`;
+        PreviewBox.style.backgroundColor = `var(--White)`;
 
         OutputBox.style.color = `var(--Cool-gray)`;
+        PreviewBox.style.color = `var(--Marine-blue)`;
     };
 }
 
